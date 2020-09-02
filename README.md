@@ -4,7 +4,6 @@
 
 ```python
 ​
-​
 from dataclasses import dataclass
 from typing import Tuple
 
@@ -14,7 +13,6 @@ class Stack:
     databases   : Tuple[str, ...] = ("PostgreSQL", "Mongo", "Redis")
     misc        : Tuple[str, ...] = ("Docker", "Celery")
     ongoing     : Tuple[str, ...] = ("Django", "GraphQL")
-​
 ​
 ```
 </h3>
