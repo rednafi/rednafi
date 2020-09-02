@@ -12,7 +12,7 @@ class Bio:
 
 @dataclass
 class Stack:
-    languages   : Tuple[str, ...] = ("Python", "Go", "Shell")
+    languages   : Tuple[str, ...] = ("Python", "Go", "Bash")
     databases   : Tuple[str, ...] = ("PostgreSQL", "Mongo", "Redis")
     misc        : Tuple[str, ...] = ("Docker", "Celery")
     ongoing     : Tuple[str, ...] = ("Django", "GraphQL")
