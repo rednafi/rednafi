@@ -5,6 +5,7 @@ Config:
 Theme   : VS Code Material
 Width   : Fixed, 850px
 Font    : JetBrains Mono
+Padding : Default
 """
 
 from dataclasses import dataclass
