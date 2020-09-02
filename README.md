@@ -1,5 +1,8 @@
 <h3>
-    
+<blockquote>
+<blockquote>
+<blockquote>
+
 ```python
 from dataclasses import dataclass
 from typing import Tuple
@@ -11,5 +14,8 @@ class Stack:
     misc        : Tuple[str, ...] = ("Docker", "Celery")
     ongoing     : Tuple[str, ...] = ("Django", "GraphQL")
 ```
+</blockquote>
+<blockquote>
+<blockquote>
 
 </h3>
