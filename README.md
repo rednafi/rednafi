@@ -8,9 +8,4 @@ class Stack:
     databases   : Tuple[str, ...] = ("PostgreSQL", "Mongo", "Redis")
     misc        : Tuple[str, ...] = ("Docker", "Celery")
     ongoing     : Tuple[str, ...] = ("Django", "GraphQL")
-
-@dataclass
-class Social:
-    twitter     : str = "rednafi"
-    linkedin    : str = "redowan"
 ```
