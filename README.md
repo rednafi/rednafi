@@ -1,11 +1,10 @@
+<!-- Zero width character is used to put extra blank lines before and after code -->
+
 <h3>
-<pre>
-
-
-
-</pre>
 
 ```python
+​
+​
 from dataclasses import dataclass
 from typing import Tuple
 
@@ -15,10 +14,7 @@ class Stack:
     databases   : Tuple[str, ...] = ("PostgreSQL", "Mongo", "Redis")
     misc        : Tuple[str, ...] = ("Docker", "Celery")
     ongoing     : Tuple[str, ...] = ("Django", "GraphQL")
+​
+​
 ```
-<pre>
-
-
-
-</pre>
 </h3>
