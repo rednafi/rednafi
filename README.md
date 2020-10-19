@@ -7,6 +7,7 @@
 from dataclasses import dataclass, asdict
 import json
 
+
 @dataclass
 class Point:
     languages   : tuple = ("Python", "Bash")
@@ -17,6 +18,7 @@ class Point:
     def serialize(self):
         stack_dict = asdict(self)
         return json.dumps(stack_dict, indent=4)
+
 
 point = Point()
 print(point.serialize())
