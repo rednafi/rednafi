@@ -2,29 +2,25 @@
 
 <h3>
     
-```go
+```python
 ​
-package main
+from dataclasses import dataclass, asdict
+import json
 
-import (
-	"encoding/json"
-	"fmt"
-)
+@dataclass
+class Point:
+  languages	: tuple = ("Python", "Bash")
+  databases	: tuple = ("PostgreSQL", "Mongo", "Redis")
+  misc      : tuple = ("Docker", "Celery")
+  ongoing 	: tuple = ("Django", "GraphQL", "JavaScript")
+  
+  def serialize(self):
+    stack_dict = asdict(self)
+    return json.dumps(stack_dict, indent=4)
 
-func main() {
 
-	Stack := map[string][]string{
-		"languages"	: {"Python", "Bash"},
-		"databases"	: {"PostgreSQL", "Mongo", "Redis"},
-		"misc"		: {"Docker", "Celery"},
-		"ongoing"	: {"Django", "GraphQL", "Go"},
-	}
-	b, err := json.MarshalIndent(Stack, "", "  ")
-	if err != nil {
-		fmt.Println("error:", err)
-	}
-	fmt.Println(string(b))
-}
+point = Point()
+print(point.serialize())
 ​
 ```
 </h3>
