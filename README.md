@@ -16,8 +16,7 @@ class Stack:
     ongoing     : tuple = ("Django", "GraphQL", "JavaScript")
 
     def serialize(self):
-        stack_dict = asdict(self)
-        return json.dumps(stack_dict, indent=4)
+        return json.dumps(asdict(self), indent=4)
 
 
 stack = Stack()
