@@ -9,7 +9,7 @@ import json
 
 
 @dataclass
-class Point:
+class Stack:
     languages   : tuple = ("Python", "Bash")
     databases   : tuple = ("PostgreSQL", "Mongo", "Redis")
     misc        : tuple = ("Docker", "Celery")
@@ -20,8 +20,8 @@ class Point:
         return json.dumps(stack_dict, indent=4)
 
 
-point = Point()
-print(point.serialize())
+stack = Stack()
+print(stack.serialize())
 ​
 ```
 </h3>
