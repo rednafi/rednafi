@@ -10,10 +10,10 @@ from dataclasses import asdict, dataclass
 
 @dataclass
 class Stack:
-    languages   : tuple[str, ...] = ("Python", "Bash")
-    databases   : tuple[str, ...] = ("PostgreSQL", "Mongo", "Redis")
-    misc        : tuple[str, ...] = ("Docker", "Celery", "RQ")
-    ongoing     : tuple[str, ...] = ("Django", "DRF", "JavaScript")
+    languages   : tuple = ("Python", "Bash", "JavaScript")
+    databases   : tuple = ("PostgreSQL", "Mongo", "Redis")
+    misc        : tuple = ("Docker", "Celery", "RQ", "RabbitMQ")
+    ongoing     : tuple = ("Django", "DRF", "Trio")
 
     def serialize(self):
         return json.dumps(asdict(self), indent=4)
