@@ -12,7 +12,7 @@ from dataclasses import asdict, dataclass
 class Stack:
     languages   : tuple = ("Python", "Bash", "JavaScript")
     databases   : tuple = ("PostgreSQL", "Mongo", "Redis")
-    misc        : tuple = ("Docker", "Celery", "RQ", "RabbitMQ")
+    misc        : tuple = ("Docker", "Celery", "RabbitMQ")
     ongoing     : tuple = ("Django", "DRF", "Trio")
 
     def serialize(self):
