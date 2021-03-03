@@ -10,7 +10,7 @@ from dataclasses import asdict, dataclass
 
 @dataclass
 class Stack:
-    languages   : tuple = ("Python", "Bash", "JavaScript")
+    languages   : tuple = ("Python", "JS", "Go")
     databases   : tuple = ("PostgreSQL", "Mongo", "Redis")
     misc        : tuple = ("Docker", "Celery", "RabbitMQ")
     ongoing     : tuple = ("Django", "DRF", "Trio")
