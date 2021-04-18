@@ -13,7 +13,7 @@ class Stack:
     languages   : tuple = ("Python", "JS", "Go")
     databases   : tuple = ("PostgreSQL", "Mongo", "Redis")
     misc        : tuple = ("Docker", "Celery", "RabbitMQ")
-    ongoing     : tuple = ("Django", "DRF", "Trio")
+    ongoing     : tuple = ("Django", "DRF", "Asyncio")
 
     def serialize(self):
         return json.dumps(asdict(self), indent=4)
