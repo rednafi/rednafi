@@ -11,8 +11,8 @@ from dataclasses import asdict, dataclass
 @dataclass
 class Arsenal:
     languages: tuple[str, ...] = ("Python", "JS", "Go")
-    databases: tuple[str, ...] = ("PostgreSQL", "Mongo", "Redis")
-    misc:      tuple[str, ...] = ("Docker", "Celery", "RabbitMQ", "Arq")
+    databases: tuple[str, ...] = ("SQLite", "PostgreSQL", "DynamoDB", "Redis")
+    misc:      tuple[str, ...] = ("Docker", "Celery", "RabbitMQ", "Arq", "SQS")
     ongoing:   tuple[str, ...] = ("Django", "DRF", "Asyncio")
 
     def jsonify(self):
