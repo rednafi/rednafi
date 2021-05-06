@@ -3,24 +3,24 @@
 <h3>
     
 ```python
-​
+​from __future__ import annotations
 import json
 from dataclasses import asdict, dataclass
 
 
 @dataclass
-class Stack:
-    languages   : tuple = ("Python", "JS", "Go")
-    databases   : tuple = ("PostgreSQL", "Mongo", "Redis")
-    misc        : tuple = ("Docker", "Celery", "RabbitMQ")
-    ongoing     : tuple = ("Django", "DRF", "Asyncio")
+class Arsenal:
+    languages: tuple[str, ...] = ("Python", "JS", "Go")
+    databases: tuple[str, ...] = ("PostgreSQL", "Mongo", "Redis")
+    misc:      tuple[str, ...] = ("Docker", "Celery", "RabbitMQ", "Arq")
+    ongoing:   tuple[str, ...] = ("Django", "DRF", "Asyncio")
 
-    def serialize(self):
+    def jsonify(self):
         return json.dumps(asdict(self), indent=4)
 
 
-stack = Stack()
-print(stack.serialize())
+arsenal = Arsenal()
+print(arsenal.jsonify())
 ​
 ```
 </h3>
