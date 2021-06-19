@@ -17,7 +17,7 @@ class Arsenal:
     misc     : tuple[str, ...] = ("Docker", "Celery", "RabbitMQ", "Arq", "SQS")
     ongoing  : tuple[str, ...] = ("Django", "DRF", "Asyncio")
 
-    def jsonify(self) -> None:
+    def jsonify(self) -> str:
         return json.dumps(asdict(self), indent=4)
 
 
