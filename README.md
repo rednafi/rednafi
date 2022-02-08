@@ -2,27 +2,15 @@
 
 <h3>
     
-```python
-​
-from __future__ import annotations
-
-import json
-from dataclasses import asdict, dataclass
-
-
-@dataclass
-class Arsenal:
-    languages: tuple[str, ...] = ("Python", "JS", "Go")
-    databases: tuple[str, ...] = ("SQLite", "PostgreSQL", "DynamoDB", "Redis")
-    misc     : tuple[str, ...] = ("Docker", "Celery", "RabbitMQ", "Arq", "SQS")
-    ongoing  : tuple[str, ...] = ("Django", "DRF", "Asyncio")
-
-    def jsonify(self) -> str:
-        return json.dumps(asdict(self), indent=4)
-
-
-arsenal = Arsenal()
-print(arsenal.jsonify())
-​
+```json
+{
+  "languages": ["Python", "Go", "JS", "Shell", "..."],
+    "databases": ["PostgreSQL", "EdgeDB", "DynamoDB", "Redis", "..."],
+      "paradigms": ["Microservices", "SOA", "Async", "..."],
+        "tools": ["Django", "Flask", "Starlette", "Kafka", "RabbitMQ", "RQ", "..."],
+          "infrastructure": ["AWS", "Docker", "..."],
+            "twitter": "rednafi",
+              "musings": "https://rednafi.github.io/reflections/"
+}
 ```
 </h3>
