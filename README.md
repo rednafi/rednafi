@@ -3,7 +3,7 @@
 <pre align="center">
 <h3>
   <i>
-    <a href="https://rednafi.github.io/reflections" target="_blank">✨ reflections ✨</a>
+    <a href="https://rednafi.github.io/reflections" target="_blank"> ⚙️ reflections ⚙️ </a>
   </i>
  </h3>
 </pre>
