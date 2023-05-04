@@ -6,12 +6,11 @@ import { promises } from "fs";
 
 const rssUrl = "https://rednafi.github.io/index.xml";
 
-const header = `<style>table {width: 100%;}</style>\n
-</div align="center">\n
+const header = `</div align="center">
 Healthcare hacker by day and OSS necromancer by night.\n
 SWE at [Dendi](https://dendisoftware.com) and writing here on my \
 [blog](https://rednafi.github.io).
-Find me on Twitter [@rednafi](https://twitter.com/rednafi).\n
+Find me on Twitter [@rednafi](https://twitter.com/rednafi).
 </div>\n\n`;
 
 const outputFile = "README.md";
