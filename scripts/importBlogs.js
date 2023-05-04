@@ -39,9 +39,12 @@ getRssData()
     let output = "";
 
     // Add a title to the output string
-    output += `Healthcare hacker by day and OSS necromancer by night. SWE at [Dendi](https://dendisoftware.com/) and writing here on my [blog](rednafi.github.io). Find me on Twitter [@rednafi]((https://twitter.com/rednafi)).\n\n`;
+    output += `</div align="center">\nHealthcare hacker by day and OSS necromancer by night.\n
+SWE at [Dendi](https://dendisoftware.com) and writing here on my [blog](https://rednafi.github.io). Find me on Twitter [@rednafi](https://twitter.com/rednafi).\n
+</div>\n\n`;
 
     // Add a header row to the output string
+    output += `### Recent articles\n\n`;
     output += "| Title | Published On |\n";
     output += "| ----- | ------------ |\n";
 
