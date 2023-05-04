@@ -1,12 +1,12 @@
 <div align="center">
+---
 
 Healthcare hacker by day and OSS necromancer by night.<br>
 SWE at <a href="https://dendisoftware.com" target="_blank">Dendi</a> and writing here on my <a href="https://rednafi.github.io" target="_blank">blog</a>. Find me on Twitter <a href="https://twitter.com/rednafi" target="_blank">@rednafi</a>.
 </div>
 
 ---
-
-<div align="center">
+<div>
 
 #### Recent articles
 

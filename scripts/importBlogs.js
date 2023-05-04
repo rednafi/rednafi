@@ -7,6 +7,7 @@ import { promises } from "fs";
 const rssUrl = "https://rednafi.github.io/index.xml";
 
 const header = `<div align="center">
+---
 
 Healthcare hacker by day and OSS necromancer by night.<br>
 SWE at <a href="https://dendisoftware.com" target="_blank">Dendi</a> \
@@ -15,8 +16,7 @@ Find me on Twitter <a href="https://twitter.com/rednafi" target="_blank">@rednaf
 </div>
 
 ---
-
-<div align="center">\n\n`;
+<div>\n\n`;
 
 const outputFile = "README.md";
 const parser = new Parser();
