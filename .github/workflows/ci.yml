@@ -13,48 +13,47 @@ on:
   # Allow running this workflow manually
   workflow_dispatch:
 
-
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repo
-      uses: actions/checkout@v3
-      with:
-        # Otherwise, the token used is the GITHUB_TOKEN, instead of your personal
-        # access token
-        persist-credentials: false
-        # Otherwise, there would be errors pushing refs to the destination repository
-        fetch-depth: 0
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          # Otherwise, the token used is the GITHUB_TOKEN, instead of your personal
+          # access token
+          persist-credentials: false
+          # Otherwise, there would be errors pushing refs to the destination repository
+          fetch-depth: 0
 
-    - uses: actions/setup-node@v3
-      with:
-        node-version: "lts/*"
-        cache: npm
-        cache-dependency-path: package-lock.json
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "lts/*"
+          cache: npm
+          cache-dependency-path: package-lock.json
 
-    - name: Install dependencies
-      run: |
-        npm install
+      - name: Install dependencies
+        run: |
+          npm install
 
-    - name: Run linter
-      run: |
-        npx prettier --write .
+      - name: Run linter
+        run: |
+          npx prettier --write .
 
-    - name: Run script
-      run: |
-        node scripts/importBlogs.js
+      - name: Run script
+        run: |
+          node scripts/importBlogs.js
 
-    - name: Commit changes
-      run: |
-        git config --local user.name "github-actions[bot]"
-        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        git add .
-        git commit -m "Automated commit - updated at $(date -u)"
+      - name: Commit changes
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Automated commit - updated at $(date -u)"
 
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.ACCESS_TOKEN }}
-        branch: ${{ github.ref }}
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.ACCESS_TOKEN }}
+          branch: ${{ github.ref }}
