@@ -1,7 +1,11 @@
+<style>table {width: 100%;}</style>
+
 </div align="center">
+
 Healthcare hacker by day and OSS necromancer by night.
 
-SWE at [Dendi](https://dendisoftware.com) and writing here on my [blog](https://rednafi.github.io). Find me on Twitter [@rednafi](https://twitter.com/rednafi).
+SWE at [Dendi](https://dendisoftware.com) and writing here on my [blog](https://rednafi.github.io).
+Find me on Twitter [@rednafi](https://twitter.com/rednafi).
 
 </div>
 

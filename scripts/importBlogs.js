@@ -5,6 +5,15 @@ import { Parser } from "xml2js";
 import { promises } from "fs";
 
 const rssUrl = "https://rednafi.github.io/index.xml";
+
+const header = `<style>table {width: 100%;}</style>\n
+</div align="center">\n
+Healthcare hacker by day and OSS necromancer by night.\n
+SWE at [Dendi](https://dendisoftware.com) and writing here on my \
+[blog](https://rednafi.github.io).
+Find me on Twitter [@rednafi](https://twitter.com/rednafi).\n
+</div>\n\n`;
+
 const outputFile = "README.md";
 const parser = new Parser();
 
@@ -39,9 +48,7 @@ getRssData()
     let output = "";
 
     // Add a title to the output string
-    output += `</div align="center">\nHealthcare hacker by day and OSS necromancer by night.\n
-SWE at [Dendi](https://dendisoftware.com) and writing here on my [blog](https://rednafi.github.io). Find me on Twitter [@rednafi](https://twitter.com/rednafi).\n
-</div>\n\n`;
+    output += header;
 
     // Add a header row to the output string
     output += `#### Recent articles\n\n`;
