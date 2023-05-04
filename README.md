@@ -1,13 +1,13 @@
 <pre>
 <div align="center">
-<strong>
+<h4>
 >>> <<<
 
 Healthcare hacker by day and OSS necromancer by night.
 SWE at <a href="https://dendisoftware.com" target="_blank">Dendi</a> and writing here on my <a href="https://rednafi.github.io" target="_blank">blog</a>. Find me on Twitter <a href="https://twitter.com/rednafi" target="_blank">@rednafi</a>.
 
 >>> <<<
-</strong>
+</h4>
 </div>
 </pre>
 
