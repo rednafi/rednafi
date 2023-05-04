@@ -36,11 +36,11 @@ jobs:
 
     - name: Install dependencies
       run: |
-        npm install -g
+        npm install
 
     - name: Run linter
       run: |
-        prettier --write .
+        npx prettier --write .
 
     - name: Run script
       run: |
