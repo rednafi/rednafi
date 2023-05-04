@@ -5,7 +5,6 @@ SWE at <a href="https://dendisoftware.com" target="_blank">Dendi</a> and writing
 </div>
 
 ---
----
 
 <div align="center">
 

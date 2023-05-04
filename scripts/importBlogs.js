@@ -15,7 +15,6 @@ Find me on Twitter <a href="https://twitter.com/rednafi" target="_blank">@rednaf
 </div>
 
 ---
----
 
 <div align="center">\n\n`;
 
