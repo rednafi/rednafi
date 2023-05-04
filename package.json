@@ -1,0 +1,19 @@
+{
+  "name": "rednafi",
+  "version": "1.0.0",
+  "description": "<h2 align=\"center\"> <pre><i><a href=\"https://rednafi.github.io\" target=\"_blank\">⚙ reflections ⚙</a></i></pre> </h2>",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "node-fetch": "^3.3.1",
+    "xml2js": "^0.5.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.8"
+  }
+}

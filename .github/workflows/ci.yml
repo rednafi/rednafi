@@ -1,0 +1,51 @@
+# Run a bash script to randomly generate empty commit to this repo.
+name: CI
+
+on:
+  # Since we're pushing from this CI, don't run this on the push event because
+  # that'll trigger an infinite loop
+  # push: [ main ]
+
+  # Add a schedule to run the job every day at 0:00 UTC
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v3
+      with:
+        # Otherwise, the token used is the GITHUB_TOKEN, instead of your personal
+        # access token
+        persist-credentials: false
+        # Otherwise, there would be errors pushing refs to the destination repository
+        fetch-depth: 0
+
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: lts
+
+    - name: Install dependencies
+      run: |
+        npm install
+
+    - name: Run linter
+      run: |
+        npx run prettier --write .
+
+    - name: Commit changes
+      run: |
+        git config --local user.name "github-actions[bot]"
+        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git add .
+        git commit -m "Automated commit - updated at $(date -u)"
+
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.ACCESS_TOKEN }}
+        branch: ${{ github.ref }}
