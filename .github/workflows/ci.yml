@@ -28,10 +28,11 @@ jobs:
         # Otherwise, there would be errors pushing refs to the destination repository
         fetch-depth: 0
 
-    - uses: actions/checkout@v3
     - uses: actions/setup-node@v3
       with:
-        node-version: 18
+        node-version: "lts/*"
+        cache: npm
+        cache-dependency-path: package-lock.json
 
     - name: Install dependencies
       run: |
@@ -39,7 +40,7 @@ jobs:
 
     - name: Run linter
       run: |
-        npx run prettier --write .
+        prettier --write .
 
     - name: Commit changes
       run: |
