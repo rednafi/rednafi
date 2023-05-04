@@ -5,7 +5,7 @@ SWE at [Dendi](https://dendisoftware.com) and writing here on my [blog](https://
 
 </div>
 
-### Recent articles
+#### Recent articles
 
 | Title | Published On |
 | ----- | ------------ |

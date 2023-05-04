@@ -44,7 +44,7 @@ SWE at [Dendi](https://dendisoftware.com) and writing here on my [blog](https://
 </div>\n\n`;
 
     // Add a header row to the output string
-    output += `### Recent articles\n\n`;
+    output += `#### Recent articles\n\n`;
     output += "| Title | Published On |\n";
     output += "| ----- | ------------ |\n";
 
