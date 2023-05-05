@@ -1,7 +1,7 @@
 {
   "name": "rednafi",
   "version": "1.0.0",
-  "description": "<h2 align=\"center\"> <pre><i><a href=\"https://rednafi.github.io\" target=\"_blank\">⚙ reflections ⚙</a></i></pre> </h2>",
+  "description": "<h2 align=\"center\"> <pre><i><a href=\"https://rednafi.com\" target=\"_blank\">⚙ reflections ⚙</a></i></pre> </h2>",
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
