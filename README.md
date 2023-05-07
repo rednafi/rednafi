@@ -1,7 +1,7 @@
 <div align="center">
 
-Healthcare hacker by day and OSS necromancer by night.<br> SWE at <a href="https://dendisoftware.com" target="_blank">Dendi</a> and writing here on my <a href="https://rednafi.com" target="_blank">blog</a>. Find me on Twitter <a href="https://twitter.com/rednafi" target="_blank">@rednafi</a>.
-
+Software carpenter with a knack for networking and databases. Find my musings on
+[rednafi.com](https://rednafi.com).
 <div>
 
 #### Recent articles
