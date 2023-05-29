@@ -9,7 +9,7 @@ const rssUrl = "https://rednafi.com/index.xml";
 const header = `<div align="center">
 
 Software carpenter with a knack for networking and databases. Find my musings on
-[rednafi.com](https://rednafi.com).
+<a href="https://rednafi.com/" rel="me">https://rednafi.com/</a>.
 <div>\n\n`;
 
 const outputFile = "README.md";
