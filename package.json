@@ -10,7 +10,7 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
-    "node-fetch": "^3.3.1",
+    "node-fetch": "^3.3.2",
     "xml2js": "^0.6.0"
   },
   "devDependencies": {
