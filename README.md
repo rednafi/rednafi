@@ -9,7 +9,7 @@ Software carpenter with a knack for networking and databases. Find my musings on
 | Title | Published On |
 | ----- | ------------ |
 | [Escaping the template pattern hellscape in Python](https://rednafi.com/python/escape_template_pattern/) | Sat, 01 Jul 2023 |
+| [Dummy load balancer in a single Go script](https://rednafi.com/go/dummy_load_balancer/) | Wed, 30 Aug 2023 |
 | [Limit goroutines with buffered channels](https://rednafi.com/go/limit_goroutines_with_buffered_channels/) | Wed, 23 Aug 2023 |
 | [Writing a TOTP client in Go](https://rednafi.com/go/totp_client/) | Sun, 20 Aug 2023 |
 | [Interface guards in Go](https://rednafi.com/go/interface_guards/) | Fri, 18 Aug 2023 |
-| [Writing on well-trodden topics](https://rednafi.com/zephyr/writing_on_well_trodden_topics/) | Mon, 14 Aug 2023 |
