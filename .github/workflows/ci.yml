@@ -19,7 +19,7 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           # Otherwise, the token used is the GITHUB_TOKEN, instead of your personal
           # access token
