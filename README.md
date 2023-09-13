@@ -8,8 +8,8 @@ Software carpenter with a knack for networking and databases. Find my musings on
 
 | Title | Published On |
 | ----- | ------------ |
-| [Escaping the template pattern hellscape in Python](https://rednafi.com/python/escape_template_pattern/) | Sat, 01 Jul 2023 |
-| [Configuring options in Go](https://rednafi.com/go/configure_options/) | Tue, 05 Sep 2023 |
-| [Dummy load balancer in a single Go script](https://rednafi.com/go/dummy_load_balancer/) | Wed, 30 Aug 2023 |
-| [Limit goroutines with buffered channels](https://rednafi.com/go/limit_goroutines_with_buffered_channels/) | Wed, 23 Aug 2023 |
-| [Writing a TOTP client in Go](https://rednafi.com/go/totp_client/) | Sun, 20 Aug 2023 |
+| [Escaping the template pattern hellscape in Python](http://rednafi.com/python/escape_template_pattern/) | Sat, 01 Jul 2023 |
+| [Configuring options in Go](http://rednafi.com/go/configure_options/) | Tue, 05 Sep 2023 |
+| [Dummy load balancer in a single Go script](http://rednafi.com/go/dummy_load_balancer/) | Wed, 30 Aug 2023 |
+| [Limit goroutines with buffered channels](http://rednafi.com/go/limit_goroutines_with_buffered_channels/) | Wed, 23 Aug 2023 |
+| [Writing a TOTP client in Go](http://rednafi.com/go/totp_client/) | Sun, 20 Aug 2023 |
