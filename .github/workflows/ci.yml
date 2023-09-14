@@ -21,9 +21,6 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
-          # Otherwise, the token used is the GITHUB_TOKEN, instead of your personal
-          # access token
-          persist-credentials: false
           # Otherwise, there would be errors pushing refs to the destination repository
           fetch-depth: 0
           ref: ${{ github.head_ref }}
@@ -57,5 +54,4 @@ jobs:
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.ACCESS_TOKEN }}
           force_with_lease: true
