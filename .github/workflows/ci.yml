@@ -26,6 +26,8 @@ jobs:
           persist-credentials: false
           # Otherwise, there would be errors pushing refs to the destination repository
           fetch-depth: 0
+          ref: ${{ github.head_ref }}
+          token: ${{ secrets.ACCESS_TOKEN }}
 
       - uses: actions/setup-node@v3
         with:
