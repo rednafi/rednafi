@@ -9,7 +9,7 @@ Software carpenter with a knack for networking and databases. Find my musings on
 | Title | Published On |
 | ----- | ------------ |
 | [Escaping the template pattern hellscape in Python](https://rednafi.com/python/escape_template_pattern/) | Sat, 01 Jul 2023 |
+| [Dotfile stewardship for the indolent](https://rednafi.com/misc/dotfile_stewarding_for_the_indolent/) | Wed, 27 Sep 2023 |
 | [An ode to the neo-grotesque web](https://rednafi.com/zephyr/an_ode_to_the_neo_grotesque_web/) | Mon, 18 Sep 2023 |
 | [Self-hosted Google Fonts in Hugo](https://rednafi.com/misc/self_hosted_google_fonts_in_hugo/) | Thu, 14 Sep 2023 |
 | [Configuring options in Go](https://rednafi.com/go/configure_options/) | Tue, 05 Sep 2023 |
-| [Dummy load balancer in a single Go script](https://rednafi.com/go/dummy_load_balancer/) | Wed, 30 Aug 2023 |
