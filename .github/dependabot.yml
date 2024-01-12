@@ -1,7 +1,7 @@
 version: 2
 updates:
   # Update node deps
-  - package-ecosystem: "npm"
+  - package-ecosystem: "go"
     directory: "/"
     schedule:
       interval: "weekly"

@@ -6,9 +6,9 @@ on:
   # that'll trigger an infinite loop
   # push: [ main ]
 
-  # Add a schedule to run the job every day at 0:00 UTC
+  # Add a schedule to run the job every 6 hours
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 */6 * * *"
 
   # Allow running this workflow manually
   workflow_dispatch:
@@ -26,23 +26,42 @@ jobs:
           ref: ${{ github.head_ref }}
           token: ${{ secrets.ACCESS_TOKEN }}
 
-      - uses: actions/setup-node@v4
+      - name: Setup go
+        uses: actions/setup-go@v2
         with:
-          node-version: "lts/*"
-          cache: npm
-          cache-dependency-path: package-lock.json
+          go-version: 1.21
+
+      - name: Cache Go modules and build binary
+        id: cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/go/pkg/mod
+            scripts/main
+          key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum', 'scripts/*.go') }}
+          restore-keys: |
+            ${{ runner.os }}-go-
 
       - name: Install dependencies
-        run: |
-          npm install
+        run: go get -v -t -d ./...
+        working-directory: scripts
 
-      - name: Run linter
-        run: |
-          npx prettier --write .
+      - name: Check formatting with gofmt
+        run: if [ -n "$(gofmt -l .)" ]; then echo "gofmt needs to be run"; exit 1; fi
+        working-directory: scripts
+
+      - name: Run tests
+        run: go test -v ./...
+        working-directory: scripts
+
+      - name: Build script if not cached
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: go build -o main main.go
+        working-directory: scripts
 
       - name: Run script
-        run: |
-          node scripts/importBlogs.js
+        run: ./main
+        working-directory: scripts
 
       - name: Commit changes
         run: |
