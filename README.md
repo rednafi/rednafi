@@ -1,6 +1,6 @@
 <div align="center">
-Wandering dilettante with a flair for 1s and 0s>>> <br>
-Find my musings on <a href="https://rednafi.com/" rel="me">rednafi.com</a>
+Wandering dilettante with a flair for 1s and 0s <br>
+Find my musings at <a href="https://rednafi.com/" rel="me">rednafi.com</a>
 <div>
 
 #### Recent articles
