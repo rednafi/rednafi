@@ -1,4 +1,3 @@
-# Run a bash script to randomly generate empty commit to this repo.
 name: CI
 
 on:
@@ -60,8 +59,7 @@ jobs:
         working-directory: scripts
 
       - name: Run script
-        run: ./main
-        working-directory: scripts
+        run: scripts/main
 
       - name: Commit changes
         run: |
