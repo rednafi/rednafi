@@ -15,7 +15,7 @@ const (
 	dateFormatLimit = 16 // Limits the date format to the first 16 characters
 	header          = `<div align="center">
 Wandering dilettante with a flair for 1s and 0s <br>
-Find my musings on <a href="https://rednafi.com/" rel="me">rednafi.com</a>
+Find my musings at <a href="https://rednafi.com/" rel="me">rednafi.com</a>
 <div>`
 )
 
