@@ -7,8 +7,8 @@ Find my musings at <a href="https://rednafi.com/" rel="me">rednafi.com</a>
 
 | Title | Published On |
 | ----- | ------------ |
+| [Type assertion vs type switches in Go](https://rednafi.com/go/type_assertion_vs_type_switches/) | Wed, 31 Jan 2024 |
 | [Patching pydantic settings in pytest](https://rednafi.com/python/patch_pydantic_settings_in_pytest/) | Sat, 27 Jan 2024 |
 | [Omitting dev dependencies in Go binaries](https://rednafi.com/go/omit_dev_dependencies_in_binaries/) | Sun, 21 Jan 2024 |
 | [Eschewing black box API calls](https://rednafi.com/misc/eschewing_black_box_api_calls/) | Mon, 15 Jan 2024 |
 | [Annotating args and kwargs in Python](https://rednafi.com/python/annotate_args_and_kwargs/) | Mon, 08 Jan 2024 |
-| [Rate limiting via Nginx](https://rednafi.com/go/rate_limiting_via_nginx/) | Sat, 06 Jan 2024 |
