@@ -149,6 +149,8 @@ func TestBuildMarkdown(t *testing.T) {
 
 #### Recent articles
 
+<div align="center">
+
 | Title | Published On |
 | ----- | ------------ |
 | [Annotating args and kwargs in Python](https://rednafi.com/python/annotate_args_and_kwargs/) | Mon, 08 Jan 2024 |
@@ -156,7 +158,7 @@ func TestBuildMarkdown(t *testing.T) {
 | [Statically enforcing frozen data classes in Python](https://rednafi.com/python/statically_enforcing_frozen_dataclasses/) | Thu, 04 Jan 2024 |
 | [Planning palooza](https://rednafi.com/zephyr/planning_palooza/) | Mon, 01 Jan 2024 |
 | [Reminiscing CGI scripts](https://rednafi.com/go/reminiscing_cgi_scripts/) | Mon, 25 Dec 2023 |
-`
+</div>`
 
 	// Check if the generated markdown matches the expected value
 	if markdown != expected {

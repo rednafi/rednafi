@@ -14,7 +14,7 @@ const (
 	outputFile      = "README.md"
 	dateFormatLimit = 16
 	header          = `<div align="center">
-Roving amateur with a flair for 1s & 0s <br>
+Roving amateur with a flair for 1s & 0s. <br>
 Find my musings at <a href="https://rednafi.com/" rel="me">rednafi.com</a>
 </div>`
 )
@@ -47,11 +47,13 @@ func parseRSS(data []byte) (RSS, error) {
 
 func buildMarkdown(rss RSS, header string) string {
 	markdown := fmt.Sprintf("%s\n\n#### Recent articles\n\n", header)
-	markdown += "| Title | Published On |\n| ----- | ------------ |\n"
+	markdown += `<div align="center">`
+	markdown += "\n\n| Title | Published On |\n| ----- | ------------ |\n"
 
 	for _, item := range rss.Items[:5] {
 		markdown += fmt.Sprintf("| [%s](%s) | %s |\n", item.Title, item.Link, item.PubDate[:dateFormatLimit])
 	}
+	markdown += `</div>`
 	return markdown
 }
 
