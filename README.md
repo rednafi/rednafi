@@ -1,7 +1,7 @@
 <div align="center">
-Wandering dilettante with a flair for 1s and 0s <br>
+Roving amateur with a flair for 1s & 0s <br>
 Find my musings at <a href="https://rednafi.com/" rel="me">rednafi.com</a>
-<div>
+</div>
 
 #### Recent articles
 
