@@ -100,49 +100,45 @@ func TestParseRSS(t *testing.T) {
 
 	// Check if the parsed RSS contains the expected number of items
 	expected := 5
-	if len(rss.Channel.Items) != expected {
-		t.Errorf("parseRSS returned unexpected number of items. Got: %d, Want: %d", len(rss.Channel.Items), expected)
+	if len(rss.Items) != expected {
+		t.Errorf("parseRSS returned unexpected number of items. Got: %d, Want: %d", len(rss.Items), expected)
 	}
 
 	// Check if the first item matches the expected value
 	expectedTitle := "Annotating args and kwargs in Python"
-	if rss.Channel.Items[0].Title != expectedTitle {
-		t.Errorf("parseRSS returned unexpected title. Got: %s, Want: %s", rss.Channel.Items[0].Title, expectedTitle)
+	if rss.Items[0].Title != expectedTitle {
+		t.Errorf("parseRSS returned unexpected title. Got: %s, Want: %s", rss.Items[0].Title, expectedTitle)
 	}
 }
 
 func TestBuildMarkdown(t *testing.T) {
 	// Create a test RSS struct
 	rss := RSS{
-		Channel: struct {
-			Items []Item `xml:"item"`
-		}{
-			Items: []Item{
-				{
-					Title:   "Annotating args and kwargs in Python",
-					Link:    "https://rednafi.com/python/annotate_args_and_kwargs/",
-					PubDate: "Mon, 08 Jan 2024 00:00:00 +0000",
-				},
-				{
-					Title:   "Rate limiting via Nginx",
-					Link:    "https://rednafi.com/go/rate_limiting_via_nginx/",
-					PubDate: "Sat, 06 Jan 2024 00:00:00 +0000",
-				},
-				{
-					Title:   "Statically enforcing frozen data classes in Python",
-					Link:    "https://rednafi.com/python/statically_enforcing_frozen_dataclasses/",
-					PubDate: "Thu, 04 Jan 2024 00:00:00 +0000",
-				},
-				{
-					Title:   "Planning palooza",
-					Link:    "https://rednafi.com/zephyr/planning_palooza/",
-					PubDate: "Mon, 01 Jan 2024 00:00:00 +0000",
-				},
-				{
-					Title:   "Reminiscing CGI scripts",
-					Link:    "https://rednafi.com/go/reminiscing_cgi_scripts/",
-					PubDate: "Mon, 25 Dec 2023 00:00:00 +0000",
-				},
+		Items: []Item{
+			{
+				Title:   "Annotating args and kwargs in Python",
+				Link:    "https://rednafi.com/python/annotate_args_and_kwargs/",
+				PubDate: "Mon, 08 Jan 2024 00:00:00 +0000",
+			},
+			{
+				Title:   "Rate limiting via Nginx",
+				Link:    "https://rednafi.com/go/rate_limiting_via_nginx/",
+				PubDate: "Sat, 06 Jan 2024 00:00:00 +0000",
+			},
+			{
+				Title:   "Statically enforcing frozen data classes in Python",
+				Link:    "https://rednafi.com/python/statically_enforcing_frozen_dataclasses/",
+				PubDate: "Thu, 04 Jan 2024 00:00:00 +0000",
+			},
+			{
+				Title:   "Planning palooza",
+				Link:    "https://rednafi.com/zephyr/planning_palooza/",
+				PubDate: "Mon, 01 Jan 2024 00:00:00 +0000",
+			},
+			{
+				Title:   "Reminiscing CGI scripts",
+				Link:    "https://rednafi.com/go/reminiscing_cgi_scripts/",
+				PubDate: "Mon, 25 Dec 2023 00:00:00 +0000",
 			},
 		},
 	}
