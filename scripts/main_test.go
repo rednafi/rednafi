@@ -145,11 +145,9 @@ func TestBuildMarkdown(t *testing.T) {
 
 	// Call the buildMarkdown function with the test RSS struct
 	markdown := buildMarkdown(rss, "Test title")
-	expected := `Test title
+	expected := `Test title<div align="center">
 
 #### Recent articles
-
-<div align="center">
 
 | Title | Published On |
 | ----- | ------------ |
