@@ -1,5 +1,5 @@
 <div align="center">
-Roving amateur with a flair for 1s & 0s. <br>
+Roving amateur with a flair for words and wires. <br>
 Find my musings at <a href="https://rednafi.com/" rel="me">rednafi.com</a>
 </div>
 
