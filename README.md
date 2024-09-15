@@ -1,11 +1,9 @@
 <div align="center">
 Roving amateur with a flair for words and wires. <br>
 Find my musings at <a href="https://rednafi.com/" rel="me">rednafi.com</a>
-</div>
+</div><div align="center">
 
 #### Recent articles
-
-<div align="center">
 
 | Title | Published On |
 | ----- | ------------ |
