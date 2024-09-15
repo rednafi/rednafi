@@ -46,9 +46,9 @@ func parseRSS(data []byte) (RSS, error) {
 }
 
 func buildMarkdown(rss RSS, header string) string {
-  markdown := `<div align="center">`
+	markdown := `<div align="center">`
 	markdown += fmt.Sprintf("%s\n\n#### Recent articles\n\n", header)
-  markdown += `</div>`
+	markdown += `</div>`
 	markdown += `<div align="center">`
 	markdown += "\n\n| Title | Published On |\n| ----- | ------------ |\n"
 
