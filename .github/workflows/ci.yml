@@ -42,21 +42,21 @@ jobs:
             ${{ runner.os }}-go-
 
       - name: Install dependencies
-        run: go get -v -t -d ./...
         working-directory: scripts
+        run: go get -v -t -d ./...
 
       - name: Check formatting with gofmt
-        run: if [ -n "$(gofmt -l .)" ]; then echo "gofmt needs to be run"; exit 1; fi
         working-directory: scripts
+        run: if [ -n "$(gofmt -l .)" ]; then echo "gofmt needs to be run"; exit 1; fi
 
       - name: Run tests
-        run: go test -v ./...
         working-directory: scripts
+        run: go test -v ./...
 
       - name: Build script if not cached
         if: steps.cache.outputs.cache-hit != 'true'
-        run: go build -o main main.go
         working-directory: scripts
+        run: go build -o main main.go
 
       - name: Run script
         run: scripts/main
