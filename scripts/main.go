@@ -7,6 +7,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"strings"
 )
 
 const (
@@ -36,7 +37,22 @@ func fetchRSS(url string) ([]byte, error) {
 	}
 	defer resp.Body.Close()
 
-	return io.ReadAll(resp.Body)
+	if resp.StatusCode != http.StatusOK {
+		return nil, fmt.Errorf("HTTP request failed with status: %s", resp.Status)
+	}
+
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return nil, err
+	}
+
+	contentType := resp.Header.Get("Content-Type")
+	if !strings.Contains(contentType, "application/xml") &&
+		!strings.Contains(contentType, "text/xml") {
+		return nil, fmt.Errorf("Invalid content type: %s", contentType)
+	}
+
+	return body, nil
 }
 
 func parseRSS(data []byte) (RSS, error) {
@@ -46,7 +62,6 @@ func parseRSS(data []byte) (RSS, error) {
 }
 
 func buildMarkdown(rss RSS, header string) string {
-	// Use the header as-is without adding anything extra
 	markdown := fmt.Sprintf("%s", header)
 	markdown += `<div align="center">`
 	markdown += "\n\n#### Recent articles\n\n"

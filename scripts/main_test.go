@@ -3,6 +3,7 @@ package main
 import (
 	"net/http"
 	"net/http/httptest"
+	"strings"
 	"testing"
 )
 
@@ -71,23 +72,64 @@ const httpResponse = `
 `
 
 func TestFetchRSS(t *testing.T) {
-	// Create a test server to mock the HTTP response
-	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		// Write the response body
-		w.Write([]byte(httpResponse))
-	}))
-	defer server.Close()
-
-	// Call the fetchRSS function with the test server URL
-	data, err := fetchRSS(server.URL)
-	if err != nil {
-		t.Errorf("fetchRSS returned an error: %v", err)
+	tests := []struct {
+		name          string
+		statusCode    int
+		contentType   string
+		responseBody  string
+		expectError   bool
+		expectedError string
+	}{
+		{
+			name:          "Valid RSS response",
+			statusCode:    http.StatusOK,
+			contentType:   "application/xml",
+			responseBody:  httpResponse,
+			expectError:   false,
+			expectedError: "",
+		},
+		{
+			name:          "Invalid content type",
+			statusCode:    http.StatusOK,
+			contentType:   "text/html",
+			responseBody:  "<html><body>Not XML</body></html>",
+			expectError:   true,
+			expectedError: "Invalid content type",
+		},
+		{
+			name:          "HTTP status error",
+			statusCode:    http.StatusInternalServerError,
+			contentType:   "application/xml",
+			responseBody:  "",
+			expectError:   true,
+			expectedError: "HTTP request failed with status: 500 Internal Server Error",
+		},
 	}
 
-	// Check if the response body matches the expected value
-	expected := httpResponse
-	if string(data) != expected {
-		t.Errorf("fetchRSS returned unexpected data. Got: %s, Want: %s", string(data), expected)
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			// Create a test server to mock the HTTP response
+			server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+				w.Header().Set("Content-Type", tt.contentType)
+				w.WriteHeader(tt.statusCode)
+				w.Write([]byte(tt.responseBody))
+			}))
+			defer server.Close()
+
+			// Call the fetchRSS function with the test server URL
+			data, err := fetchRSS(server.URL)
+			if (err != nil) != tt.expectError {
+				t.Fatalf("fetchRSS() error = %v, expectError %v", err, tt.expectError)
+			}
+
+			if err != nil && !strings.Contains(err.Error(), tt.expectedError) {
+				t.Errorf("fetchRSS() error = %v, expected error = %s", err, tt.expectedError)
+			}
+
+			if !tt.expectError && string(data) != tt.responseBody {
+				t.Errorf("fetchRSS() returned unexpected data. Got: %s, Want: %s", string(data), tt.responseBody)
+			}
+		})
 	}
 }
 
