@@ -7,9 +7,9 @@ Find my musings at <a href="https://rednafi.com/" rel="me">rednafi.com</a>
 
 | Title | Published On |
 | ----- | ------------ |
+| [Discovering direnv](https://rednafi.com/misc/direnv/) | Wed, 02 Oct 2024 |
 | [Notes on building event-driven systems](https://rednafi.com/misc/notes_on_event_driven_systems/) | Sat, 21 Sep 2024 |
 | [Bash namerefs for dynamic variable referencing](https://rednafi.com/misc/bash_namerefs/) | Fri, 20 Sep 2024 |
 | [Behind the blog](https://rednafi.com/misc/behind_the_blog/) | Sat, 14 Sep 2024 |
 | [Shell redirection syntax soup](https://rednafi.com/misc/shell_redirection/) | Thu, 12 Sep 2024 |
-| [Shades of testing HTTP requests in Python](https://rednafi.com/python/testing_http_requests/) | Mon, 02 Sep 2024 |
 </div>
