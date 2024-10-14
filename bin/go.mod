@@ -1,3 +1,3 @@
-module example.com/scripts
+module example.com/bin
 
 go 1.23.0
