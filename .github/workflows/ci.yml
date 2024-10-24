@@ -35,16 +35,16 @@ jobs:
         run: if [[ -n "$(gofmt -l .)" ]]; then echo "gofmt needs to be run"; exit 1; fi
 
       - name: Run tests
-        working-directory: scripts
+        working-directory: bin
         run: go test -v ./...
 
       - name: Build script if not cached
         if: steps.cache.outputs.cache-hit != 'true'
-        working-directory: scripts
+        working-directory: bin
         run: go build -o main main.go
 
       - name: Run script
-        run: scripts/main
+        run: bin/main
 
       - name: Commit changes
         run: |
