@@ -31,7 +31,7 @@ jobs:
           go-version: 1.23
 
       - name: Check formatting with gofmt
-        working-directory: scripts
+        working-directory: bin
         run: if [[ -n "$(gofmt -l .)" ]]; then echo "gofmt needs to be run"; exit 1; fi
 
       - name: Run tests
