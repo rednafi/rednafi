@@ -7,7 +7,7 @@ Find my musings at <a href="https://rednafi.com/" rel="me">rednafi.com</a>
 
 | Title | Published On |
 | ----- | ------------ |
-| [Injecting Pytest Fixtures Without Cluttering Test Function Signatures](http://rednafi.com/python/inject_pytest_fixture/) | Mon, 02 Dec 2024 |
+| [Injecting Pytest fixtures without cluttering test signatures](http://rednafi.com/python/inject_pytest_fixture/) | Mon, 02 Dec 2024 |
 | [Explicit method overriding with @typing.override](http://rednafi.com/python/typing_override/) | Wed, 06 Nov 2024 |
 | [Quicker startup with module-level __getattr__](http://rednafi.com/python/module_getattr/) | Sun, 03 Nov 2024 |
 | [Docker mount revisited](http://rednafi.com/misc/docker_mount/) | Tue, 22 Oct 2024 |
