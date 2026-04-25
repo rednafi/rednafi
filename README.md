@@ -7,9 +7,9 @@ Find my musings at <a href="https://rednafi.com/" rel="me">rednafi.com</a>
 
 | Title | Published On |
 | ----- | ------------ |
+| [Go quirks: function closures capturing mutable references](https://rednafi.com/go/closure-mutable-refs/) | Sat, 25 Apr 2026 |
 | [Accepted proposal: UUID in the Go standard library](https://rednafi.com/shards/2026/04/go-uuid/) | Sun, 19 Apr 2026 |
 | [Peeking into Go struct tags](https://rednafi.com/go/struct-tags/) | Sat, 18 Apr 2026 |
 | [Error translation in Go services](https://rednafi.com/go/error-translation/) | Sun, 12 Apr 2026 |
 | [Dynamo: Amazon's highly available key-value store](https://rednafi.com/shards/2026/04/dynamo/) | Sat, 11 Apr 2026 |
-| [Stacked log lines considered harmful](https://rednafi.com/shards/2026/04/no-stacked-loglines/) | Tue, 07 Apr 2026 |
 </div>
